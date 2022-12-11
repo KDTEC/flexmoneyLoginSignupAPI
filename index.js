@@ -26,7 +26,7 @@ mongoose.connect('mongodb+srv://god:admin@cluster0.dawwfyz.mongodb.net/?retryWri
 //Routes
 app.post("/login", login) 
 app.post("/register", register) 
-
-app.listen(3000,() => {
+const port = 3000
+app.listen(port,() => {
     console.log("Started at port 3000")
 })
