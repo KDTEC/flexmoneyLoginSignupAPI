@@ -14,7 +14,7 @@ app.use(cors())
 // Connect to the database
 mongoose.set('strictQuery', true);
 
-mongoose.connect(process.env.MONGODB)
+mongoose.connect('mongodb+srv://god:admin@cluster0.dawwfyz.mongodb.net/?retryWrites=true&w=majority')
     .then(() => console.log('Connected!'))
     .catch(err => {
         console.log("Mongo connection ERROR OCCURED");
@@ -27,6 +27,6 @@ mongoose.connect(process.env.MONGODB)
 app.post("/login", login) 
 app.post("/register", register) 
 
-app.listen(9002,() => {
-    console.log("BE started at port 9002")
+app.listen(3000,() => {
+    console.log("Started at port 3000")
 })
